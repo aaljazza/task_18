@@ -20,6 +20,7 @@ class RestaurantListView(ListAPIView):
     serializer_class = RestaurantListSerializer
     permission_classes = [AllowAny,]
     filter_backends = [SearchFilter, OrderingFilter,]
+    search_fields = ['name','description']
 
 
 class RestaurantDetailView(RetrieveAPIView):
